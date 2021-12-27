@@ -19,7 +19,7 @@ router.post('/', (req, res) =>{
     VALUES ($1, $2, $3)`;
     pool.query(queryText, [req.body.itemName,req.body.quantity, req.body.units])
     .then((result) =>{
-        res.send(201);
+        res.sendStatus(201);
     }).catch((error) =>{
         console.log("error adding an item", error)
     })

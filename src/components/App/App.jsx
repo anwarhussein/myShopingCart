@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     getItems();
-  }, []);
+  }, [items]);
 
   const getItems = () => {
     axios
@@ -51,10 +51,15 @@ function App() {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("/list", itemData)
+      .post("/list", {
+        itemName: itemData.itemName,
+        quantity: itemData.quantity,
+        units: itemData.units,
+      })
       .then((response) => {
+        console.log(response.data);
         setItemData({
-          ItemName: "",
+          itemName: "",
           quantity: "",
           units: "",
         });
