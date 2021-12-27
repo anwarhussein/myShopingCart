@@ -1,4 +1,35 @@
-main {
+ main {
   width: 90%;
   margin: auto;
+} 
+.item{
+ display: grid;
+ grid-template-columns: auto auto auto auto;
+ grid-gap: 15px;
+ align-items: center;
+
+
+}
+
+.item > div{
+  background-color: rgba(59, 137, 168, 0.8);
+  border: 1px solid black;
+  text-align: center;
+  font-size: 30px;
+  width: 250px;
+  height: 200px;
+  margin-top: 20px;
+  border-radius: 5%;
+ 
+}
+/* .btn{
+ 
+  align-content: center;
+  margin:auto
+  
+  */
+
+.container > button{
+  margin:10px;
+  margin-top: 50px;
 }
